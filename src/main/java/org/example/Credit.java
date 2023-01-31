@@ -11,19 +11,19 @@ public class Credit {
         Scanner sc = new Scanner(System.in);
         Logger l= Logger.getLogger("com.api.jar");
 
-         l.info("Enter the credit card name:");
-         String name = sc.next();
-         l.info("Enter the credit card number:");
-         String number = sc.next();
-         l.info("enter the expiration date");
-         String date=sc.next();
+        l.info("Enter the credit card name:");
+        String name = sc.next();
+        l.info("Enter the credit card number:");
+        String number = sc.next();
+        l.info("enter the expiration date");
+        String date=sc.next();
 
-         l.info("Enter the credit card name:");
-         String name1 = sc.next();
-         l.info("Enter the credit card number:");
-         String number1 = sc.next();
-         l.info("enter the expiration date");
-         String date1=sc.next();
+        l.info("Enter the credit card name:");
+        String name1 = sc.next();
+        l.info("Enter the credit card number:");
+        String number1 = sc.next();
+        l.info("enter the expiration date");
+        String date1=sc.next();
 
         Card c=new Card(name,number,date);
         Card c1 = null;
@@ -48,10 +48,12 @@ class Card extends Credit implements Cloneable{
         this.number=number;
         this.date=date;
     }
+
     public Object clone() throws CloneNotSupportedException
     {
         return super.clone();
     }
+
     public boolean compare(Card verify){
         return this.number.equals(verify.number);
     }

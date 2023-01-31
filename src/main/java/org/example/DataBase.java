@@ -9,8 +9,10 @@ class DataBase{
     Connection con;
     private static DataBase t2=null;
     Logger l= Logger.getLogger("com.api.jar");
+
     private DataBase(){
     }
+
     public static DataBase getInstance()
     {
         if (t2 == null)
@@ -19,6 +21,7 @@ class DataBase{
         }
         return t2;
     }
+
     public void connect(String url, String user, String password) {
         try{
             con=DriverManager.getConnection(url,user,password);
@@ -29,6 +32,7 @@ class DataBase{
 
         l.info("Connection Created Successfully\n");
     }
+
     public void closeconnection() throws SQLException {
         con.close();
         l.info("Connection Closed Successfully\n");

@@ -24,6 +24,7 @@ class Basicshape {
 
         l.info("Enter the type of shape\n1.circle\n2.rectangle\n3.triangle");
         String type = sc.next();
+
         try {
             if (type.equals(s)) {
                 l.info("Enter the radius\n");
