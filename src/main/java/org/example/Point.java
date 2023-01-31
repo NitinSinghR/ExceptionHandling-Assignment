@@ -5,11 +5,14 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class point {
+public class Point {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Logger l= Logger.getLogger("com.api.jar");
-        int x=0,y = 0,x1=0,y1=0;
+        int x=0;
+        int y = 0;
+        int x1=0;
+        int y1=0;
         try {
             l.info("Enter the x value:");
             x = sc.nextInt();
@@ -23,10 +26,10 @@ public class point {
         }catch(InputMismatchException e){
             l.log(Level.INFO,()->" "+e);
         }
-        Point p = new Point(x, y);
-        Point p1=null;
+        point p = new point(x, y);
+        point p1=null;
         try {
-            p1 = (Point) p.clone();
+            p1 = (point) p.clone();
         }catch(CloneNotSupportedException e){
         l.log(Level.INFO,()->" "+e);
     }
@@ -34,10 +37,10 @@ public class point {
         l.info(e);
     }
 }
-class Point extends point implements Cloneable{
+class point extends Point implements Cloneable{
     private int x1;
     private int y1;
-    Point(int x,int y) {
+    point(int x,int y) {
         this.x1 = x;
         this.y1 = y;
     }
