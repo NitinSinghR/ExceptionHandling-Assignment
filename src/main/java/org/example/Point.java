@@ -28,7 +28,7 @@ public class Point {
         Points p = new Points(x, y);
         Points p1=null;
         try {
-            p1 = (Points) p.clone();
+            p1 = (Points) p.cloneable();
         }catch(CloneNotSupportedException e){
         l.log(Level.INFO,()->" "+e);
     }
@@ -36,7 +36,7 @@ public class Point {
         l.info(e);
     }
 }
-class Points extends Point implements Cloneable{
+class Points extends Point implements cloneable{
     private int x1;
     private int y1;
     Points(int x,int y) {
@@ -52,8 +52,8 @@ class Points extends Point implements Cloneable{
         }
     }
 
-    public Object clone() throws CloneNotSupportedException
+    public Object cloneable() throws CloneNotSupportedException
     {
-        return super.clone();
+        return super.cloneable();
     }
 }
