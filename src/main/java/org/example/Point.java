@@ -52,8 +52,8 @@ class Points extends Point implements Cloneable{
         }
     }
 
-    public Object cloneable() throws CloneNotSupportedException
+    public Object clone() throws CloneNotSupportedException
     {
-        return super.cloneable();
+        return super.clone();
     }
 }
