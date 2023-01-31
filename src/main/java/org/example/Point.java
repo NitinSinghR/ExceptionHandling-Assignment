@@ -26,10 +26,10 @@ public class Point {
         }catch(InputMismatchException e){
             l.log(Level.INFO,()->" "+e);
         }
-        point p = new point(x, y);
-        point p1=null;
+        Points p = new Points(x, y);
+        Points p1=null;
         try {
-            p1 = (point) p.clone();
+            p1 = (Points) p.clone();
         }catch(CloneNotSupportedException e){
         l.log(Level.INFO,()->" "+e);
     }
@@ -37,10 +37,10 @@ public class Point {
         l.info(e);
     }
 }
-class point extends Point implements Cloneable{
+class Points extends Point implements Cloneable{
     private int x1;
     private int y1;
-    point(int x,int y) {
+    Points(int x,int y) {
         this.x1 = x;
         this.y1 = y;
     }
